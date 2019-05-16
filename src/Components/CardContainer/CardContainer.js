@@ -1,13 +1,14 @@
 import React from 'react';
 import Card from '../Card/Card'
+import './CardContainer.css'
 
 const CardContainer = (props) => {
   const displayCards = props.cards.map((eachCard) => {
-    return <Card {...eachCard}/>
+    return <Card key={eachCard.id} {...eachCard}/>
   })
   
   return (
-    <div>
+    <div className="card-container">
       {displayCards}
     </div>
   )

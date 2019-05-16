@@ -1,9 +1,10 @@
 import React from 'react'
+import'./Card.css'
 
 const Card = (props) => {
   console.log(props, "card props")
   return (
-    <div>
+    <div className="card">
       <p>{props.name}</p>
       <p>{props.date}</p>
       <p>{props.time}</p>

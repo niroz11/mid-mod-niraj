@@ -1,0 +1,11 @@
+.user-form {
+  display: flex;
+}
+
+.user-form input{
+  margin-right: 10px;
+}
+
+.user-form button {
+  width:150px;
+}
