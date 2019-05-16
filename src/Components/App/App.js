@@ -10,7 +10,7 @@ class App extends Component {
     const options = createOption("POST",body )
     console.log(options)
     try{
-      const response = fetch(url,options)
+      const response = await fetch(url,options)
       const result = await response.json()
       console.log(result)
     }catch(error){
