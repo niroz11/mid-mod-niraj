@@ -54,9 +54,7 @@ class App extends Component {
           <Form addReservation={this.addReservation}/>
           {this.state.error && this.state.error}
         </div>
-        <div className='resy-container'>
           <CardContainer cards={reservations}/>
-        </div>
       </div>
     )
   }
