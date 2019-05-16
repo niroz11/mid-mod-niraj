@@ -4,7 +4,7 @@ import './CardContainer.css'
 
 const CardContainer = (props) => {
   const displayCards = props.cards.map((eachCard) => {
-    return <Card key={eachCard.id} {...eachCard}/>
+    return <Card key={eachCard.id} {...eachCard} deleteReservation={props.deleteReservation}/>
   })
   
   return (

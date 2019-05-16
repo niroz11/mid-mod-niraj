@@ -40,9 +40,23 @@ class App extends Component {
       this.setState({
         error: "Can not add your reservation"
       })
+    } 
+  }
+
+  deleteReservation = async (id,event) => {
+    event.preventDefault()
+    const url = `http://localhost:3001/api/v1/reservations/${id}`
+    try{
+      const response = await fetch(url)
+      const result = await response.json()
+      console.log(result, "delete result")
+      console.log("fetch call made")
+    }catch(error){
+      this.setState({
+        error: "No choice! You must come to our restaurant"
+      })
     }
 
-    
   }
   render() {
     const { reservations } = this.state
@@ -54,7 +68,7 @@ class App extends Component {
           <Form addReservation={this.addReservation}/>
           {this.state.error && this.state.error}
         </div>
-          <CardContainer cards={reservations}/>
+          <CardContainer cards={reservations} deleteReservation= {this.deleteReservation}/>
       </div>
     )
   }
